@@ -124,37 +124,19 @@ public class GlobalController : MonoBehaviour
                 memory[x,y] = true;
             }
             catch (System.IndexOutOfRangeException)
-            {
-                Debug.Log((Mathf.FloorToInt(pos.x * 20)-1) + "!" + (Mathf.FloorToInt(pos.y * 20)-1) );
+            {               
             }
         }
-        #region Debug out
-        string[] data = new string[20];
-        for (int i = 0; i < 20; i++)
-        {
-            for (int j = 0; j < 20; j++)
-            {
-                try
-                {
-                    data[i] += System.Convert.ToInt16(memory[j, i]) + "";
-                }
-                catch (System.IndexOutOfRangeException)
-                {
-                    Debug.Log((i) + "!" + (j));
-                }
-            }
-        }
-        Debug.Log("Memory state \n" + data[0] + "\n" + data[1] + "\n" + data[2] + "\n" + data[3] + "\n" + data[4] + "\n" + data[5] + "\n" + data[6] + "\n" + data[7] + "\n" + data[8] + "\n" + data[9] + "\n" +
-        data[10] + "\n" + data[11] + "\n" + data[12] + "\n" + data[13] + "\n" + data[14] + "\n" + data[15] + "\n" + data[16] + "\n" + data[17] + "\n" + data[18] + "\n" + data[19]);
-        #endregion
     }
 
     public float Compare(byte[,] drawed, bool[,] mem)
     {
-        float cor = 0, inc = 0;
+        float cor = 0, inc = 0, bas = 0;
         for (int i = 0; i < 20; i++)
             for (int j = 0; j < 20; j++)
             {
+                if (!mem[i, j])
+                    bas++;
                 if ((drawed[i, j] > 0) && mem[i, j])
                 {
                     cor++;
@@ -168,8 +150,8 @@ public class GlobalController : MonoBehaviour
                     }
             }
         float rez = ((float)(cor)) / ((float)(cor + inc));
-        Debug.Log("Compare result: Cor-" + cor + " Inc-" + inc + " Rez =" + rez);
-        if (inc > cor * 2)
+        Debug.Log("Compare result: Cor-" + cor + " Inc-" + inc + " Rez =" + rez+ "BASE-" + bas);
+        if (inc*1.5f > bas )
         {
             return -1;
         }
@@ -239,30 +221,9 @@ public class GlobalController : MonoBehaviour
                     }
                     catch
                     {
-                        Debug.Log("X-" + (x+a) + " Y- " + (y+b));
                     }
                 }
         }
-        #region Debug
-        string[] data = new string[20];
-        for (int i = 0; i < 20; i++)
-        {
-            for (int j = 0; j < 20; j++)
-            {
-                try
-                {
-                    data[i] += (mat[j, i]) + "";
-
-                }
-                catch (System.IndexOutOfRangeException)
-                {
-                    Debug.Log((i) + "!" + (j));
-                }
-            }
-        }
-        Debug.Log("Input state \n" + data[0] + "\n" + data[1] + "\n" + data[2] + "\n" + data[3] + "\n" + data[4] + "\n" + data[5] + "\n" + data[6] + "\n" + data[7] + "\n" + data[8] + "\n" + data[9] + "\n" +
-        data[10] + "\n" + data[11] + "\n" + data[12] + "\n" + data[13] + "\n" + data[14] + "\n" + data[15] + "\n" + data[16] + "\n" + data[17] + "\n" + data[18] + "\n" + data[19]);
-        #endregion
         return mat;
     }
     public void PlusScore()
