@@ -169,6 +169,10 @@ public class GlobalController : MonoBehaviour
             }
         float rez = ((float)(cor)) / ((float)(cor + inc));
         Debug.Log("Compare result: Cor-" + cor + " Inc-" + inc + " Rez =" + rez);
+        if (inc > cor * 2)
+        {
+            return -1;
+        }
         return rez;
     }
 
