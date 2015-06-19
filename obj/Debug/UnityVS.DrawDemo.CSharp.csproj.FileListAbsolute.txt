@@ -1,0 +1,11 @@
+C:\HaMMeR\Unity\DrawDemo\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\HaMMeR\Unity\DrawDemo\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\HaMMeR\Unity\DrawDemo\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\HaMMeR\Unity\DrawDemo\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\HaMMeR\Unity\DrawDemo\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\HaMMeR\Unity\DrawDemo\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\HaMMeR\Unity\DrawDemo\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\HaMMeR\Unity\DrawDemo\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\HaMMeR\Unity\DrawDemo\obj\Debug\UnityVS.DrawDemo.CSharp.csprojResolveAssemblyReference.cache
+C:\HaMMeR\Unity\DrawDemo\obj\Debug\Assembly-CSharp.dll
+C:\HaMMeR\Unity\DrawDemo\obj\Debug\Assembly-CSharp.pdb
