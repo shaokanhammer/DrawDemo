@@ -37,6 +37,7 @@ public class GlobalController : MonoBehaviour
             starter.SetActive(true);
             timeMax = 20;
             score = 0;
+            starter.GetComponentInChildren<Text>().text = "Начать заново";
             gameObject.SetActive(false);
             mouse.SetActive(false);
         }
