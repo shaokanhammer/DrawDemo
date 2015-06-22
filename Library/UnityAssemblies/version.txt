@@ -1,3 +1,3 @@
 4.6.1f1:1.9.9.0
-StandaloneWindows64
+StandaloneOSXIntel
 C:/HaMMeR/Unity/Editor4.6/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll
